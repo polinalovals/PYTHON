@@ -11,8 +11,28 @@ def norm_number(a):
         index_list_a += 1
     return result
 
+def binary(x):
+    res = ''
+    while x > 0:
+        res = str(x % 2) + res
+        x //= 2
+    return res
 
-print(norm_number('11001'))
+
+def binary_rec(x):
+    if x > 0:
+        return binary_rec(x // 2) + str(x % 2)
+    return ''
+
+
+def to_dec(b, i=0):
+    if len(b) > 0:
+        return to_dec(b[:-1], i + 1) + int(b[-1]) * 2 ** i
+    return 0
+
+
+# print(binary_rec(24))
+print(to_dec('10001110'))
 
 
 def recursiv_number(a):
@@ -24,21 +44,8 @@ def recursiv_number(a):
 
 
 def recursiv_dis(a):
-    if a < 10:
-        return a
-    else:
+    if a > 0:
         return a % 10 + recursiv_dis(a // 10)
+    return 0
 
 
-number = int(input("Geben Sie eine Zahl ein: "))
-result = recursiv_dis(number)
-
-
-def recursiv_dis(a=input('Geben Sie eine Zahl ein: ')):
-    if len(a) == 0:
-        return 0
-    return int(a[0]) + recursiv_dis(a[1:])
-
-
-result = recursiv_dis()
-print(f"Die Summe der Ziffern ist: {result}")
