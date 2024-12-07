@@ -1,5 +1,6 @@
 # Написать рекурсивную функцию, переводящую число в двоичное представление
 # Предварительно написать функцию нерекурсивную с этим алгоритмом (без bin)
+
 def norm_number(a):
     list_a = list(a)
     list_a.reverse()
@@ -14,12 +15,12 @@ def norm_number(a):
 print(norm_number('11001'))
 
 
-def recursiv_number(a=input('geben sie eine zahel ein: '))
-    for a == 0:
+def recursiv_number(a):
+    if a == 0:
         return 0
-    for a == 1:
+    if a == 1:
         return 1
-    return recursiv_number(int(elements) for elements in a)  # как то написать сумму
+    return recursiv_number(int(elements) for elements in a)
 
 
 def recursiv_dis(a):
