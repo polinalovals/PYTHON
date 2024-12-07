@@ -11,6 +11,6 @@ def fibonacci_i(n):
         print(a, end=' ')
 
 
-fibonacci_i(10)
+fibonacci_i(4)
 print()
 fibonacci_r(10)
